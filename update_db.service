@@ -1,0 +1,10 @@
+[Unit]
+Description=Update cloud mongo DB
+Wants=myMonitor.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/update_db.sh
+
+[Install]
+WantedBy=multi-user.target

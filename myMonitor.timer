@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer
+Requires=update_db.service
+
+[Timer]
+Unit=update_db.service
+OnCalendar=*-*-* 06:00:00
+
+[Install]
+WantedBy=timers.target
